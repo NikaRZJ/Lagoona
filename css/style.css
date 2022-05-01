@@ -1,0 +1,113 @@
+.container {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Header */
+
+.section-header {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-top: 30px;
+}
+
+.logo {
+    margin-right: 40px;
+}
+
+.header-account-link {
+    margin-left: auto;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-item:not(:last-child) {
+    margin-right: 45px;
+}
+
+.section-nav {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    padding: 27px 45px;
+    padding-right: 0;
+}
+
+.header-right {
+    margin-left: auto;
+}
+
+/* Special */
+
+.special-content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.section-special-heading {
+    display: block;
+}
+
+.special-left {
+    margin-right: 297px;
+}
+
+/* Services */
+
+.section-services-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.section-services-item {
+    flex-basis: 40%;
+    margin-right: 23px;
+    margin-bottom: 23px;
+}
+
+.section-services-item-link {
+    display: block;
+}
+
+/* Advantages */
+
+.section-advantages-list {
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.section-advantages-item {
+    max-width: 275px;
+}
