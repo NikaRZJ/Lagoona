@@ -1,3 +1,8 @@
+:root {
+    --primary-color:#CC9933;
+    --border-color:#e1e1e1;
+}
+
 /* Muller Bold*/
 @font-face {
     font-family: 'Muller Bold';
@@ -53,6 +58,19 @@ h2 {
 
 a {
     text-decoration: none;
+    transition: color .3s ease;
+}
+
+a:hover {
+    color: orange;
+}
+
+a:active {
+    color: #A47312;
+}
+
+a:focus {
+    outline: 3px solid var(--primary-color);
 }
 
 ul {
@@ -76,14 +94,26 @@ html {
 
 .btn {
     padding: 13px 20px;
-    border: 1px solid #CC9933;
+    border: 1px solid var(--primary-color);
     box-sizing: border-box;
     border-radius: 10px;
     height: 42px;
     font-weight: 400;
     font-size: 16px;
     line-height: 16px;
-    color: #CC9933;
+    color: var(--primary-color);
+    transition: background-color .3s ease, color .3s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transform: translateY(1px);
+}
+
+.btn:active {
+    background-color: #A47312;
 }
 
 /* Header */
@@ -117,7 +147,7 @@ html {
     font-size: 16px;
     line-height: 16px;
     font-weight: 400;
-    color: #CC9933;
+    color: var(--primary-color);
     background: url(../img/Vector.svg) left center no-repeat transparent;
     background-size: 21px 12px;
     padding-left: 28px;
@@ -145,7 +175,7 @@ html {
 }
 
 .line {
-    border-right: 1px solid #e1e1e1;
+    border-right: 1px solid var(--border-color);
     height: 50px;
     padding: 0;
     margin-right: 57px;
@@ -247,15 +277,11 @@ html {
 }
 
 .maldives {
-    background-image: url(/img/maldives.png);
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url(/img/maldives.png);
 }
 
 .krit {
-    background-image: url(/img/krit.png);
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url(/img/krit.png);
     margin-top: 23px;
 }
 
@@ -359,7 +385,7 @@ html {
     font-weight: 500;
     font-size: 20px;
     line-height: 200%;
-    color: #CC9933;
+    color: var(--primary-color);
     margin-right: 4px;
 }
 
@@ -369,8 +395,8 @@ html {
     height: 11px;
     box-sizing: border-box;
     transform: rotate(-45deg);
-    border-right: 2px solid #CC9933;
-    border-bottom: 2px solid #CC9933;
+    border-right: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
     transition: 0.3s;
 }
 
@@ -402,7 +428,7 @@ html {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-between;
+    
 }
 
 .section-advantages-item {
@@ -411,6 +437,10 @@ html {
     background-color: #FFFFFF;
     border-radius: 15px;
     margin-bottom: 23px;
+}
+
+.section-advantages-item:not(:nth-child(4n)) {
+    margin-right: 23px;
 }
 
 .advantages-content {
@@ -452,6 +482,7 @@ html {
 }
 
 .section-placement-item {
+    position: relative;
     width: 374px;
     height: 440px;
     margin-bottom: 23px;
@@ -518,9 +549,21 @@ html {
     line-height: 200%;
     color: #FFFFFF;
     padding-bottom: 27px;
+    
+}
+
+.section-placement-link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 27px;
 }
 
 .section-placement-link-icon {
+    position: absolute;
+    right: 54px;
+    bottom: 41px;
     display: inline-block;
     width: 11px;
     height: 11px;
@@ -598,7 +641,7 @@ html {
 }
 
 .form-block:not(:last-child) {
-    border-right: 1px solid #e1e1e1;
+    border-right: 1px solid var(--border-color);
 }
 
 .form-block:not(:first-child) {
@@ -612,12 +655,12 @@ html {
 }
 
 #nights {
-    border-bottom: 1px solid #e1e1e1;
+    border-bottom: 1px solid var(--border-color);
     max-width: 121px;
 }
 
 #tourists {
-    border-bottom: 1px solid #e1e1e1;
+    border-bottom: 1px solid var(--border-color);
     max-width: 121px;
 }
 
@@ -675,11 +718,11 @@ html {
 }
 
 .btn-route {
-    color: #CC9933;
+    color: var(--primary-color);
     background-color: #FFFFFF;
     width: 213px;
     height: 70px;
-    border-color: #CC9933;
+    border-color: var(--primary-color);
 }
 
 .section-contacts {
@@ -687,7 +730,7 @@ html {
 }
 
 .section-contacts-link {
-    color: #CC9933;
+    color: var(--primary-color);
 }
 
 /* Footer */
@@ -730,7 +773,7 @@ html {
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
-    color: #CC9933;
+    color: var(--primary-color);
 }
 
 .footer-icons {
